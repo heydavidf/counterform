@@ -37,7 +37,7 @@ cd counterform
 npm ci
 ```
 
-npm 11 may warn that `min-release-age` is an unknown project config. That is harmless: the setting, which only installs package versions published at least three days ago, takes effect from npm 12.
+npm versions before 11.10 may warn that `min-release-age` is an unknown project config. That is harmless: the setting, which only installs package versions published at least three days ago, takes effect from npm 11.10.
 
 Start it:
 
