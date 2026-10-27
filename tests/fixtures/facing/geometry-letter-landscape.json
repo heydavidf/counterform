@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "name": "An exercise in attention",
+  "composition": "editorial",
+  "roles": {
+    "display": {
+      "fontId": "fraunces",
+      "size": 78,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.02,
+      "tracking": -0.035,
+      "axes": {}
+    },
+    "body": {
+      "fontId": "source-serif-4",
+      "size": 18,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.65,
+      "tracking": 0,
+      "axes": {}
+    },
+    "support": {
+      "fontId": "source-sans-3",
+      "size": 11,
+      "weight": 500,
+      "style": "normal",
+      "leading": 1.5,
+      "tracking": 0.06,
+      "axes": {}
+    }
+  },
+  "grid": {
+    "columns": 12,
+    "gutter": 24,
+    "margin": 58,
+    "baseline": 8,
+    "modules": 4,
+    "layout": "asymmetric"
+  },
+  "palette": {
+    "name": "Ink & vermilion",
+    "background": "#f4f0e8",
+    "ink": "#242a25",
+    "muted": "#62655b",
+    "accent": "#b33f27",
+    "panel": "#e6e3d8"
+  },
+  "measure": 62,
+  "width": 1040,
+  "content": {
+    "title": "The shape\nof the quiet.",
+    "deck": "A study in type, space and the things we leave unsaid.",
+    "body": "A page begins before the first word. There is the edge of the paper, the space above a heading, the small interval between one thought and the next. These are not empty places. They are part of what we read.\n\nGood typography gives attention somewhere to settle. A familiar letter becomes expressive through its neighbours; a line finds its rhythm through the space around it. Change one relationship and the whole composition begins to shift.\n\nThe grid is a useful promise, not a final answer. It gives different elements a common ground, then leaves room for a voice to emerge. A generous margin, an unexpected pause, a heading that reaches across a column: structure makes these choices legible.",
+    "quote": "Space is not what remains. It is what makes the rest possible.",
+    "caption": "Notes on looking closely. An original specimen for Counterform."
+  },
+  "surface": {
+    "mode": "print",
+    "pageSize": "letter",
+    "orientation": "landscape",
+    "pages": "facing"
+  },
+  "layout": {
+    "version": 1,
+    "recipeId": "print-editorial-facing",
+    "family": "column",
+    "format": {
+      "mode": "flow"
+    },
+    "margins": {
+      "top": 36,
+      "right": 42,
+      "bottom": 36,
+      "left": 42,
+      "linked": false
+    },
+    "columns": {
+      "tracks": [
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        }
+      ],
+      "gap": 24
+    },
+    "rows": {
+      "tracks": [
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        }
+      ],
+      "gap": 16,
+      "auto": false
+    },
+    "blocks": [
+      {
+        "id": "marker",
+        "type": "marker",
+        "label": "Marker",
+        "content": "Counterform Review · Type & observation",
+        "placement": {
+          "wide": {
+            "column": 1,
+            "span": 12,
+            "row": 1,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "title",
+        "type": "title",
+        "label": "Title",
+        "contentKey": "title",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 10,
+            "row": 2,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "deck",
+        "type": "deck",
+        "label": "Deck",
+        "contentKey": "deck",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 4,
+            "row": 5,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "letter",
+        "type": "letter",
+        "label": "Letter",
+        "placement": {
+          "wide": {
+            "column": 8,
+            "span": 4,
+            "row": 5,
+            "rowSpan": 3,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "quote",
+        "type": "quote",
+        "label": "Quote",
+        "contentKey": "quote",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 5,
+            "row": 7,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "caption",
+        "type": "caption",
+        "label": "Caption",
+        "contentKey": "caption",
+        "placement": {
+          "wide": {
+            "column": 8,
+            "span": 4,
+            "row": 8,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "rule",
+        "type": "rule",
+        "label": "Rule",
+        "placement": {
+          "wide": {
+            "column": 1,
+            "span": 12,
+            "row": 4,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "medium": {
+        "columns": {
+          "tracks": [
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            }
+          ],
+          "gap": 20
+        }
+      },
+      "narrow": {
+        "columns": {
+          "tracks": [
+            {
+              "weight": 1
+            }
+          ],
+          "gap": 0
+        },
+        "margins": {
+          "top": 28,
+          "right": 24,
+          "bottom": 32,
+          "left": 24,
+          "linked": false
+        },
+        "rowGap": 22
+      }
+    },
+    "rhythm": {
+      "unit": 8,
+      "linked": true,
+      "paragraphGap": 16,
+      "headingGap": 24,
+      "indent": 0
+    },
+    "typesetting": {
+      "align": "left",
+      "hyphenate": false,
+      "language": "en",
+      "smallCaps": false,
+      "numerals": "normal"
+    }
+  }
+}

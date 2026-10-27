@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "name": "An exercise in attention",
+  "composition": "editorial",
+  "roles": {
+    "display": {
+      "fontId": "fraunces",
+      "size": 78,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.02,
+      "tracking": -0.035,
+      "axes": {}
+    },
+    "body": {
+      "fontId": "source-serif-4",
+      "size": 18,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.65,
+      "tracking": 0,
+      "axes": {}
+    },
+    "support": {
+      "fontId": "source-sans-3",
+      "size": 11,
+      "weight": 500,
+      "style": "normal",
+      "leading": 1.5,
+      "tracking": 0.06,
+      "axes": {}
+    }
+  },
+  "grid": {
+    "columns": 12,
+    "gutter": 24,
+    "margin": 58,
+    "baseline": 8,
+    "modules": 4,
+    "layout": "asymmetric"
+  },
+  "palette": {
+    "name": "Ink & vermilion",
+    "background": "#f4f0e8",
+    "ink": "#242a25",
+    "muted": "#62655b",
+    "accent": "#b33f27",
+    "panel": "#e6e3d8"
+  },
+  "measure": 62,
+  "width": 1040,
+  "content": {
+    "title": "A first study",
+    "deck": "A local workbench for type, space and colour.",
+    "body": "1. Start with a font pairing in Type. Select Display, Reading or Supporting to tune that role.\n2. Try Editorial, Interface or Poster. Your text stays intact when you switch.\n3. Use Grid for margins, columns, gutters and overlays; use Colour to choose or edit a palette.\n4. Replace the sample text in Content. Select Mobile or Narrow in the canvas toolbar to test real reflow. The percentage under the canvas is preview scale, not a different layout width.\n5. Save snapshot keeps a named checkpoint. Compare an adjustment pins A as a reference while the controls edit B. Add an optional intent and inspect the actual differences; both versions travel with the saved study.\n6. Export system previews the contents and downloads a ZIP, live-text SVG, or Print IDML. Print can also Save as PDF; Social can download a PNG.\n\nOn a phone, the design-inspector button beside the study name jumps to the controls; Back to specimen returns to the composition.\n\nPrivate fonts and saved work\n\nUnder Type → Your font files, add WOFF2, WOFF, TTF or OTF files up to 20 MB each. Specify the file's real weight and style first; for a variable weight font, use a range such as 100 900. File bytes remain in this browser's IndexedDB. Renaming a font changes its display label, not the font itself. Re-uploading the same bytes restores a missing font and does not create another copy.\n\nThe app does not automatically discover arbitrary uploaded font axes. Curated library axes are verified against the actual files. Only declare a weight range your file supports.\n\nCurrent work autosaves; snapshots are separate checkpoints. Browser storage can be cleared or become unavailable, so exported packages are the durable backup. Import a ZIP or settings JSON to move between browsers or future deployments. Missing private fonts retain their names and choices until restored.\n\nPrivate font files are excluded from ZIP and SVG by default. For one download, choose Include selected private font files and confirm that the licence permits distribution or embedding. Browser PDF may embed a selected private font, so its print action requires the same choice and confirmation. The choices reset after download and when selected fonts change. IDML links font names but contains no font files; PNG contains pixels. Open fonts in ZIP include their licences, and embedded open fonts in SVG carry OFL text. An export without a required private font identifies the dependency; Adobe may ask for locally installed fonts even when SVG contains embedded font data.\n\nWhat the export means\n\nspecimen.html and tokens.css use the same renderer as the workbench. DESIGN.md records role tokens, derived sizes, grid relationships, palette contrast, responsive behaviour, rationale and font dependencies. settings.json reopens the editable study. Keep the package files together when opening the HTML.\n\nOriginal specimens use baseline and modular guides. Advanced compositions use actual grid placement; the baseline overlay still does not snap glyphs or paginate a print document. The interface specimen's disabled button is a visual component sample. Colour checks measure specific pairs, not complete WCAG compliance or aesthetic quality. Social mode exports exact-size PNGs. Print mode opens a browser PDF proof and downloads one-page or one-facing-spread IDML. IDML has editable text frames, paragraph styles and colours reconstructed from the visible specimen; the CSS grid is not preserved exactly, and variable font axes may need adjustment. Neither route produces press-ready pagination, bleed or imposition. There is no arbitrary freeform canvas.",
+    "quote": "Browser Print / Save as PDF provides proofs, not press-ready pagination.",
+    "caption": "Counterform README · local study fixture"
+  },
+  "surface": {
+    "mode": "print",
+    "pageSize": "a4",
+    "orientation": "portrait",
+    "pages": "facing"
+  },
+  "layout": {
+    "version": 1,
+    "recipeId": "print-editorial-facing",
+    "family": "column",
+    "format": {
+      "mode": "flow"
+    },
+    "margins": {
+      "top": 36,
+      "right": 42,
+      "bottom": 36,
+      "left": 42,
+      "linked": false
+    },
+    "columns": {
+      "tracks": [
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        }
+      ],
+      "gap": 24
+    },
+    "rows": {
+      "tracks": [
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        },
+        {
+          "weight": 1
+        }
+      ],
+      "gap": 16,
+      "auto": false
+    },
+    "blocks": [
+      {
+        "id": "marker",
+        "type": "marker",
+        "label": "Marker",
+        "content": "Counterform Review · Type & observation",
+        "placement": {
+          "wide": {
+            "column": 1,
+            "span": 12,
+            "row": 1,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "title",
+        "type": "title",
+        "label": "Title",
+        "contentKey": "title",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 10,
+            "row": 2,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "deck",
+        "type": "deck",
+        "label": "Deck",
+        "contentKey": "deck",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 4,
+            "row": 5,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "letter",
+        "type": "letter",
+        "label": "Letter",
+        "placement": {
+          "wide": {
+            "column": 8,
+            "span": 4,
+            "row": 5,
+            "rowSpan": 3,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "quote",
+        "type": "quote",
+        "label": "Quote",
+        "contentKey": "quote",
+        "placement": {
+          "wide": {
+            "column": 2,
+            "span": 5,
+            "row": 7,
+            "rowSpan": 2,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "caption",
+        "type": "caption",
+        "label": "Caption",
+        "contentKey": "caption",
+        "placement": {
+          "wide": {
+            "column": 8,
+            "span": 4,
+            "row": 8,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      },
+      {
+        "id": "rule",
+        "type": "rule",
+        "label": "Rule",
+        "placement": {
+          "wide": {
+            "column": 1,
+            "span": 12,
+            "row": 4,
+            "rowSpan": 1,
+            "align": "start"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "medium": {
+        "columns": {
+          "tracks": [
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            },
+            {
+              "weight": 1
+            }
+          ],
+          "gap": 20
+        }
+      },
+      "narrow": {
+        "columns": {
+          "tracks": [
+            {
+              "weight": 1
+            }
+          ],
+          "gap": 0
+        },
+        "margins": {
+          "top": 28,
+          "right": 24,
+          "bottom": 32,
+          "left": 24,
+          "linked": false
+        },
+        "rowGap": 22
+      }
+    },
+    "rhythm": {
+      "unit": 8,
+      "linked": true,
+      "paragraphGap": 16,
+      "headingGap": 24,
+      "indent": 0
+    },
+    "typesetting": {
+      "align": "left",
+      "hyphenate": false,
+      "language": "en",
+      "smallCaps": false,
+      "numerals": "normal"
+    }
+  }
+}

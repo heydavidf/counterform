@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "name": "An exercise in attention",
+  "composition": "editorial",
+  "roles": {
+    "display": {
+      "fontId": "fraunces",
+      "size": 78,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.02,
+      "tracking": -0.035,
+      "axes": {}
+    },
+    "body": {
+      "fontId": "source-serif-4",
+      "size": 18,
+      "weight": 400,
+      "style": "normal",
+      "leading": 1.65,
+      "tracking": 0,
+      "axes": {}
+    },
+    "support": {
+      "fontId": "source-sans-3",
+      "size": 11,
+      "weight": 500,
+      "style": "normal",
+      "leading": 1.5,
+      "tracking": 0.06,
+      "axes": {}
+    }
+  },
+  "grid": {
+    "columns": 12,
+    "gutter": 24,
+    "margin": 58,
+    "baseline": 8,
+    "modules": 4,
+    "layout": "asymmetric"
+  },
+  "palette": {
+    "name": "Ink & vermilion",
+    "background": "#f4f0e8",
+    "ink": "#242a25",
+    "muted": "#62655b",
+    "accent": "#b33f27",
+    "panel": "#e6e3d8"
+  },
+  "measure": 62,
+  "width": 1040,
+  "content": {
+    "title": "Återbruk, öppna verkstäder och nästa generations formgivning",
+    "deck": "Lördag 17 oktober · 10.00–16.30",
+    "body": "Upptäck hur gamla material kan få nytt liv. Under en dag möts formgivare, hantverkare och nyfikna besökare i öppna verkstäder. Ta med en idé, prova ett material och diskutera vad hållbar form kan betyda i vardagen.\n\nDet här är en fiktiv affischtext för att pröva svensk typografi. Ingen verklig aktivitet annonseras.",
+    "quote": "Fri entré · Workshop 250 kr",
+    "caption": "Syntetiskt test · Å Ä Ö å ä ö — ‘ ’ “ ” &"
+  }
+}
