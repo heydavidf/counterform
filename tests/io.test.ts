@@ -141,6 +141,16 @@ describe('advanced layout portability', () => {
     expect(design).not.toContain('main span is');
     expect(lint(design).summary.errors).toBe(0);
   });
+  it('keeps dollar patterns in block labels literal in the exported DESIGN.md', async () => {
+    const { applyRecipe } = await import('../src/layout');
+    const settings = applyRecipe(defaultSettings(), 'asymmetric-editorial');
+    settings.layout!.blocks[1].label = "Cost $& and $' together";
+    const files = unzipSync(await exportPackage(settings, [], false));
+    const design = strFromU8(files['DESIGN.md']);
+    expect(design).toContain("Cost $& and $' together");
+    expect(design.match(/^## Layout$/gm)).toHaveLength(1);
+    expect(lint(design).summary.errors).toBe(0);
+  });
   it('rejects malformed advanced data while preserving the legacy settings contract', async () => {
     const { applyRecipe } = await import('../src/layout');
     const legacy = defaultSettings();

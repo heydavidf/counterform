@@ -1,8 +1,9 @@
 // Isolated, actual browser-zoom check. Never installs an extension in the user's browser.
 import { chromium } from "playwright";
-import { mkdtemp, writeFile, rm } from "node:fs/promises";
+import { mkdir, mkdtemp, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+await mkdir("test-results/evidence", { recursive: true });
 const extension = await mkdtemp(join(tmpdir(), "counterform-zoom-extension-"));
 const profile = await mkdtemp(join(tmpdir(), "counterform-zoom-profile-"));
 await writeFile(
@@ -64,7 +65,7 @@ try {
       );
     readings.push({ requested: factor, actual, ...result });
     await page.screenshot({
-      path: `.impeccable/review/zoom-${factor}x.png`,
+      path: `test-results/evidence/zoom-${factor}x.png`,
       fullPage: true,
     });
   }

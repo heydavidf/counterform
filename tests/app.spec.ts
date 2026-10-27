@@ -520,6 +520,10 @@ test("exported HTML reproduces edited type, grid and content, and settings JSON 
   const jsonBytes = await readFile((await json.path())!);
   expect(JSON.parse(jsonBytes.toString())).toEqual(settings);
   await page.getByRole("button", { name: "Reset current study", exact: true }).click();
+  // Reset saves before it shows the starting study; import only after it has finished.
+  await expect(page.getByLabel("Experiment name")).toHaveValue(
+    "An exercise in attention",
+  );
   await page
     .getByLabel("Import experiment file")
     .setInputFiles({

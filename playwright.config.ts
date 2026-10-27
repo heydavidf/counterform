@@ -3,7 +3,6 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   testMatch: '*.spec.ts',
-  testIgnore: '**/evidence/**',
   fullyParallel: false,
   workers: 1,
   timeout: 45_000,
@@ -25,7 +24,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      testIgnore: [/webkit\.spec\.ts/, /\/evidence\//],
+      testIgnore: /webkit\.spec\.ts/,
       use: { browserName: 'chromium' },
     },
     {

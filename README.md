@@ -2,7 +2,7 @@
 
 Counterform is a workbench for type, space and colour. Choose a font pairing, shape a grid, set real copy, and see the result as an editorial page, an interface screen or a poster. Then export the system for a website, a print document, a social post or another design agent.
 
-It runs on your own computer. There is no account, no server and no tracking, and fonts you add stay in your browser.
+It runs on your own computer. There is no account, no online service and no tracking: a small local server runs on your machine while you use it, and fonts you add stay in your browser.
 
 ![A facing spread built from the Book page starter: mirrored text blocks with a narrow spine and wide outer margins](docs/images/spread-book-page.png)
 
@@ -12,7 +12,7 @@ It runs on your own computer. There is no account, no server and no tracking, an
 - **Shape the grid.** Weighted columns and rows, independent margins, spans, responsive overrides for medium and narrow widths, and rhythm and typesetting options. A row can be set to fit its content.
 - **Web, print and social from one renderer.**
   - Web: a responsive canvas at wide, medium and narrow widths.
-  - Print: A5, A4, A3 and Letter, portrait or landscape, single page or facing pages. Facing pages can use one grid across the spread, or a **page grid**: describe one page and Counterform builds the spread as a mirror, a repeat, or with the right page's own columns. Five facing starters use it: Book page, Margin notes, Spine channel, Two grids one horizon, and Bridge band.
+  - Print: A5, A4, A3 and Letter, portrait or landscape, single page or facing pages. Facing pages can use one grid across the spread, or a **page grid**: describe one page and Counterform builds the spread as a mirror, a repeat, or with the right page's own columns. Five facing starters use it: Book page, Margin notes, Spine channel, Two grids, one horizon, and Bridge band.
   - Social: square, portrait, story and landscape formats with Statement, Announcement and Editorial card starters, sized so the text is still readable when the image is seen on a phone.
 - **Export.** A ZIP package (`settings.json`, `tokens.css`, `specimen.html` and an agent-readable `DESIGN.md`), editable live-text SVG for Illustrator, a browser PDF proof, IDML for InDesign (one page or one facing spread) and PNG for social formats.
 - **Compare and keep versions.** Pin version A while you adjust B and see the exact differences, save named snapshots, and undo a Reset.
@@ -27,7 +27,7 @@ It runs on your own computer. There is no account, no server and no tracking, an
 
 ## Run it on your computer
 
-You need [Node.js](https://nodejs.org/) 22, or 24 or newer (the test runner does not support Node 23), Git and a desktop browser. Counterform is tested in Chromium (Chrome, Edge) and WebKit (Safari); Firefox is not tested.
+You need [Node.js](https://nodejs.org/) 22.12 or a later 22 release, or Node 24 or newer (Node 23 is not supported), plus Git and a desktop browser. Counterform is tested in Chromium (Chrome, Edge) and WebKit (Safari); Firefox is not tested.
 
 Download it and install its tools. The first install needs an internet connection; after that Counterform works offline.
 
@@ -37,6 +37,8 @@ cd counterform
 npm ci
 ```
 
+npm 11 may warn that `min-release-age` is an unknown project config. That is harmless: the setting, which only installs package versions published at least three days ago, takes effect from npm 12.
+
 Start it:
 
 ```sh
@@ -45,7 +47,13 @@ npm run dev
 
 Open **http://127.0.0.1:4318** in your browser. Keep using that exact address: your saved work and added fonts belong to it. Press Ctrl+C in the terminal to stop Counterform.
 
-If `npm run dev` says the port is already in use, another program is using port 4318. Stop that program and run it again.
+If `npm run dev` says the port is already in use, another program is using port 4318. Stop that program and run it again, or start Counterform on another port and open that address instead (here http://127.0.0.1:4400):
+
+```sh
+npx vite --host 127.0.0.1 --port 4400 --strictPort
+```
+
+Saved work and added fonts belong to each address separately, so keep using the one you choose.
 
 ### Your first study
 
@@ -93,7 +101,7 @@ npx playwright install chromium webkit
 npx playwright test
 ```
 
-`npm run build` type-checks and builds. `npm test` runs the unit tests. The browser tests start Counterform on port 4318 themselves, or reuse it if it is already running, and use isolated browser profiles, never your own. Screenshots and downloads from the tests go to `test-results/`, which Git ignores. `npm run test:zoom` checks real browser zoom in a temporary Chromium profile.
+`npm run build` type-checks and builds. `npm test` runs the unit tests. The browser tests start Counterform on port 4318 themselves, or reuse it if it is already running, and use isolated browser profiles, never your own. If a different program is using port 4318, stop it first, or the tests will talk to that program. Screenshots and downloads from the tests go to `test-results/`, which Git ignores. `npm run test:zoom` checks real browser zoom in a temporary Chromium profile; start Counterform with `npm run dev` in another terminal first.
 
 [AGENTS.md](AGENTS.md) explains where things live and the rules for changes. [design/DESIGN.md](design/DESIGN.md) is the interface's design system. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
@@ -101,7 +109,7 @@ npx playwright test
 
 Counterform's code is released under the [MIT licence](LICENSE).
 
-The bundled fonts are licensed separately under the SIL Open Font License 1.1. Each font's licence text sits beside it in `public/fonts/`, and `public/fonts/manifest.json` records where each file came from. Exports that include a bundled font include its licence.
+The bundled fonts are licensed separately under the SIL Open Font License 1.1. Each font's licence text sits beside it in `public/fonts/`, and `public/fonts/manifest.json` records each font file's download source, date, size and SHA-256 hash. Exports that include a bundled font include its licence.
 
 ## Contributing and security
 

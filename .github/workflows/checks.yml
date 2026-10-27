@@ -1,5 +1,6 @@
 # Runs on every push to main, on pull requests and weekly. Install scripts are disabled, so no dependency
-# code runs at install time. The job name "checks" is the check name a branch ruleset can require.
+# code runs at install time. The Node matrix reports as "checks (22)" and "checks (24)"; read the exact
+# names from the first pull request before requiring them in a branch ruleset.
 name: checks
 
 on:

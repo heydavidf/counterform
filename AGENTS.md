@@ -31,7 +31,7 @@ Counterform is a local, browser-based workbench for type, space and colour, buil
 
 ## Checks
 
-Run from the repository root with Node 22, or 24 or newer. Install the browsers once before the first browser run.
+Run from the repository root with Node 22.12 or a later 22 release, or Node 24 or newer. Install the browsers once before the first browser run.
 
 ```sh
 npm ci
@@ -44,9 +44,13 @@ bash .github/check-shell-blocks.sh
 bash .github/tripwire.sh origin/main
 ```
 
-`npm run build` type-checks (strict) and builds. `npm test` must report every unit test passing. `npx playwright test` starts the app on port 4318, or reuses one already running there, and must report no failures; screenshots and downloads go to `test-results/`, which Git ignores. Pass the branch you will merge into to the tripwire.
+`npm run build` type-checks (strict) and builds. `npm test` must report every unit test passing. `npx playwright test` starts the app on port 4318, or reuses whatever is already running there (stop any unrelated program on that port first), and must report no failures; screenshots and downloads go to `test-results/`, which Git ignores. Pass the branch you will merge into to the tripwire (`origin/main` in a clone of the GitHub repository); with no argument it checks the whole tree but cannot spot newly silenced checks.
 
 CI (`.github/workflows/checks.yml`) runs the build, unit tests, the Chromium browser tests, the audit, the shell-block check, the tripwire and gitleaks on every push to `main`, on pull requests and weekly. It does not run WebKit, `actionlint` or `zizmor`; run those yourself when you change the browser tests or the workflow.
+
+### Adding a facing-spread starter
+
+Add its id to `SPREAD_STARTER_IDS` and its name and description to `spreadStarterTemplates` in `src/spread-starters.ts`, then its page grid, rows and blocks to `specs` in the same file. The unit tests pick it up from `SPREAD_STARTER_IDS`; the browser tests do not, so also add it to the `starters` list at the top of `tests/page-grid-facing.spec.ts`. Update the starter count and names in `README.md`, this file and `CHANGELOG.md`.
 
 ## Working rules
 
@@ -64,6 +68,6 @@ CI (`.github/workflows/checks.yml`) runs the build, unit tests, the Chromium bro
 - Saved studies must keep loading. A new layout field is optional, validated in `validateLayout`, and absent from older studies; applying a starter is the only thing that rearranges a study's blocks.
 - A facing page grid is compiled into ordinary spread tracks; do not make the renderer or the exports depend on it.
 - Starters keep the study's shared copy, type roles and palette.
-- Follow `design/DESIGN.md` for the interface. Run Prettier on files you change.
+- Follow `design/DESIGN.md` for the interface. Keep the formatting style of the file you edit; Prettier is installed (`npx prettier --write <file>`), but not every file uses it, so do not reformat code you are not changing.
 - No em-dashes or en-dashes in code comments, interface text or documentation.
 - Record every user-visible change in `CHANGELOG.md`.

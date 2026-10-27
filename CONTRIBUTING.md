@@ -5,7 +5,7 @@ Thanks for your interest. This is a small project maintained by one person, so i
 ## Before you open a pull request
 
 1. Open an issue first for anything larger than a small fix, so we can agree on the approach.
-2. Run the checks listed in `AGENTS.md` (the same commands CI runs in `.github/workflows/checks.yml`). They must pass.
+2. Run the checks listed in `AGENTS.md`. CI (`.github/workflows/checks.yml`) runs most of them; WebKit and the workflow linters run locally only. They must pass.
 3. A bug fix should come with a test that fails before the fix and passes after it.
 4. Keep the change focused: one problem per pull request.
 

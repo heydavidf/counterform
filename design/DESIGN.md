@@ -164,6 +164,6 @@ Comparison is an editorial A/B reading mode, not a destructive toggle. Starting 
 - **Do** keep A immutable as the pinned reference and show B as the current adjustment with intent and live diffs.
 - **Do** let a deliberate overlap remain visible after its warning is acknowledged through Print anyway.
 - **Don't** treat a scaled desktop canvas as proof of narrow-screen reflow.
-- **Don't** split a facing spread into two unrelated page grids.
+- **Don't** give facing pages unrelated grids. A page grid mirrors or repeats one page, and an own right page still shares the spread's rows.
 - **Don't** make print warnings silently block an intentional proof.
-- **Don't** redistribute source PDFs or private uploaded fonts by default.
+- **Don't** redistribute private uploaded fonts by default.
